@@ -105,7 +105,7 @@ const Profile: React.FC = () => {
           <img
             src={
               user?.profile_image
-                ? `http://localhost:5000${user.profile_image}`
+                ? `http://localhost:5000${user.profile_image}?t=${Date.now()}`
                 : 'https://placehold.co/300x300'
             }
             alt="Profile"
