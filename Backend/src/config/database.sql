@@ -4,7 +4,7 @@ CREATE TABLE USERS(
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) UNIQUE NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
-    contact VARCHAR(20);
+    contact VARCHAR(20),
     password VARCHAR(255) NOT NULL,
     profile_image VARCHAR(255)
 );
@@ -13,5 +13,5 @@ CREATE TABLE IF NOT EXISTS notes (
     note_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT,
     note TEXT NOT NULL,
-    date DATE,FOREIGN KEY (user_id) REFERENCES users(id);
+    date DATE,FOREIGN KEY (user_id) REFERENCES USERS(id)
 );
